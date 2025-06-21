@@ -4,15 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityLogin extends AppCompatActivity {
 
+
     EditText edtUsername, edtPassword;
     Button btnLogin;
     DatabaseHelper db;
+    TextView txtToRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class ActivityLogin extends AppCompatActivity {
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
         db = new DatabaseHelper(this);
+        txtToRegister = findViewById(R.id.txtToRegister);
 
         btnLogin.setOnClickListener(v -> {
             String username = edtUsername.getText().toString().trim();
@@ -35,6 +39,10 @@ public class ActivityLogin extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_SHORT).show();
             }
+        });
+        txtToRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(ActivityLogin.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 }
