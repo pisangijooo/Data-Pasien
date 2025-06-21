@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formulir Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+
+    <EditText
+        android:id="@+id/reg_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/reg_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:drawablePadding="10dp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+</LinearLayout>

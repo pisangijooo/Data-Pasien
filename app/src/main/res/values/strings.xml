@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">projekakhir_uas_Intantriyulianti_Muhammadarioardhi</string>
+    <string-array name="jenis_kelamin_array">
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="golongan_darah_array">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+</resources>

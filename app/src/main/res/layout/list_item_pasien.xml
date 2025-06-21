@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:elevation="2dp"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="#FAFAFA">
+
+    <!-- Nama dan Jenis Kelamin -->
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pasien"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Detail lainnya -->
+    <TextView
+        android:id="@+id/txtDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email | JK | Alamat | Gol Darah"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Gejala dan Riwayat -->
+    <TextView
+        android:id="@+id/txtRiwayatGejala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gejala - Riwayat Penyakit"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Tanggal -->
+    <TextView
+        android:id="@+id/txtTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Pendaftaran: 01-01-2024"
+        android:textSize="13sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tombol Aksi -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="#fff"
+            android:backgroundTint="#2196F3"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hapus"
+            android:textColor="#fff"
+            android:backgroundTint="#F44336" />
+    </LinearLayout>
+
+</LinearLayout>
