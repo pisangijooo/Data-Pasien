@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,11 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ActivityLogin extends AppCompatActivity {
 
-
     EditText edtUsername, edtPassword;
     Button btnLogin;
     DatabaseHelper db;
     TextView txtToRegister;
+    ImageView btnBackLogin; // ← Tambahan
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class ActivityLogin extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         db = new DatabaseHelper(this);
         txtToRegister = findViewById(R.id.txtToRegister);
+        btnBackLogin = findViewById(R.id.btn_back); // ← Inisialisasi tombol back
 
         btnLogin.setOnClickListener(v -> {
             String username = edtUsername.getText().toString().trim();
@@ -40,9 +42,15 @@ public class ActivityLogin extends AppCompatActivity {
                 Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_SHORT).show();
             }
         });
+
         txtToRegister.setOnClickListener(v -> {
             Intent intent = new Intent(ActivityLogin.this, RegisterActivity.class);
             startActivity(intent);
+        });
+
+        // Fungsi tombol back
+        btnBackLogin.setOnClickListener(v -> {
+            finish(); // kembali ke halaman sebelumnya
         });
     }
 }

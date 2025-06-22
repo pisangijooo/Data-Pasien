@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout; // Tambahkan ini!
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 public class Dashboard extends AppCompatActivity {
@@ -19,6 +19,7 @@ public class Dashboard extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navView;
     private View sensorCard, mapCard;
+    private LinearLayout fabAdd; // ← GANTI dari FloatingActionButton ke LinearLayout
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class Dashboard extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navView = findViewById(R.id.nav_view);
         MaterialToolbar topAppBar = findViewById(R.id.topAppBar);
-        FloatingActionButton fabAdd = findViewById(R.id.fab_add);
+        fabAdd = findViewById(R.id.fab_add); // ← Sesuai LinearLayout sekarang
 
         sensorCard = findViewById(R.id.sensor);
         mapCard = findViewById(R.id.map1);

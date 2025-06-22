@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="#FFFFFF"> <!-- Background putih -->
+    android:background="#FFFFFF">
 
     <ImageView
         android:layout_width="200dp"
@@ -36,15 +36,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="LOGIN"
-        android:backgroundTint="#3F51B5"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIGN UP"
         android:backgroundTint="#3F51B5"
         android:textColor="#FFFFFF" />
 </LinearLayout>
