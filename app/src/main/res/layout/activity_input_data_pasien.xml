@@ -1,103 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F9FBFC">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <!-- Bar atas: Back + Judul -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tambah Data Pasien"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
 
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Kembali"
+                android:tint="#3F00FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Data Pasien"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#3F00FF"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Input Nama -->
         <EditText
             android:id="@+id/etNama"
             android:hint="Nama"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- Input Email -->
         <EditText
             android:id="@+id/etEmail"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
 
+        <!-- Input Alamat -->
         <EditText
             android:id="@+id/etAlamat"
             android:hint="Alamat"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
 
+        <!-- Jenis Kelamin -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin" />
+            android:text="Jenis Kelamin"
+            android:textColor="#3F00FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
 
         <RadioGroup
             android:id="@+id/rgJenisKelamin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
             <RadioButton
                 android:id="@+id/rbLaki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Laki-laki" />
+                android:text="Laki-laki"
+                android:textColor="#000000" />
 
             <RadioButton
                 android:id="@+id/rbPerempuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Perempuan" />
+                android:text="Perempuan"
+                android:textColor="#000000"
+                android:layout_marginStart="16dp" />
         </RadioGroup>
 
+        <!-- Golongan Darah -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Golongan Darah" />
+            android:text="Golongan Darah"
+            android:textColor="#3F00FF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
 
         <Spinner
             android:id="@+id/spGolDarah"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
+        <!-- Riwayat Penyakit -->
         <EditText
             android:id="@+id/etRiwayat"
             android:hint="Riwayat Penyakit"
             android:inputType="textMultiLine"
             android:minLines="2"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
 
+        <!-- Gejala -->
         <EditText
             android:id="@+id/etGejala"
             android:hint="Gejala yang Dirasakan"
             android:inputType="textMultiLine"
             android:minLines="2"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
 
+        <!-- Tanggal -->
         <EditText
             android:id="@+id/etTanggal"
             android:hint="Tanggal Pendaftaran"
             android:inputType="date"
+            android:backgroundTint="#3F00FF"
+            android:textColorHint="#999999"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" />
 
+        <!-- Tombol Simpan -->
         <Button
             android:id="@+id/btnSave"
             android:text="Simpan"
+            android:textAllCaps="false"
+            android:backgroundTint="#3F00FF"
+            android:textColor="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="24dp" />
+
     </LinearLayout>
 </ScrollView>

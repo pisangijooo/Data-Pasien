@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -13,30 +14,39 @@ public class LihatDataPasien extends AppCompatActivity {
     ListView listView;
     ArrayList<pasien> pasienList = new ArrayList<>();
     PasienAdapter adapter;
+    ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_data_pasien);
 
+        // Inisialisasi database dan list view
         db = new DatabaseHelper(this);
         listView = findViewById(R.id.listView);
+        btnBack = findViewById(R.id.btnBack);
 
+        // Inisialisasi adapter dan pasang ke list view
         adapter = new PasienAdapter(this, pasienList);
         listView.setAdapter(adapter);
 
-        loadData(); // Panggil pertama kali
+        // Fungsi tombol kembali
+        btnBack.setOnClickListener(v -> finish());
+
+        // Ambil data dari database saat activity dibuat
+        loadData();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        loadData(); // Panggil ulang saat kembali dari InputDataPasien
+        loadData(); // Ambil ulang data saat kembali ke halaman ini
     }
 
     private void loadData() {
         pasienList.clear();
         Cursor cursor = db.getAllData();
+
         if (cursor.moveToFirst()) {
             do {
                 pasien p = new pasien(
@@ -53,7 +63,8 @@ public class LihatDataPasien extends AppCompatActivity {
                 pasienList.add(p);
             } while (cursor.moveToNext());
         }
+
         cursor.close();
-        adapter.notifyDataSetChanged(); // Refresh tampilan list
+        adapter.notifyDataSetChanged(); // Update tampilan ListView
     }
 }

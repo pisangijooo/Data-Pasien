@@ -32,7 +32,9 @@ public class InputDataPasien extends AppCompatActivity {
         rgJenisKelamin = findViewById(R.id.rgJenisKelamin);
         spGolDarah = findViewById(R.id.spGolDarah);
         btnSave = findViewById(R.id.btnSave);
+        ImageView btnBack = findViewById(R.id.btnBack); // tombol kembali
 
+        // Isi spinner dengan array dari strings.xml
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.golongan_darah_array,
@@ -41,6 +43,7 @@ public class InputDataPasien extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spGolDarah.setAdapter(adapter);
 
+        // Cek apakah intent membawa data untuk update
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("ID")) {
             id = intent.getStringExtra("ID");
@@ -69,6 +72,7 @@ public class InputDataPasien extends AppCompatActivity {
             btnSave.setText("Update");
         }
 
+        // Tombol simpan
         btnSave.setOnClickListener(view -> {
             String nama = etNama.getText().toString();
             String email = etEmail.getText().toString();
@@ -101,5 +105,8 @@ public class InputDataPasien extends AppCompatActivity {
                 }
             }
         });
+
+        // Fungsi tombol kembali
+        btnBack.setOnClickListener(v -> finish());
     }
 }

@@ -1,16 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_dashboard"
-        android:title="Dashboard"
-        android:icon="@drawable/ic_dashboard" />
+        android:title="Beranda"
+        android:icon="@drawable/ic_home" />
     <item
         android:id="@+id/nav_tambah_data"
         android:title="Tambah Data Pasien"
-        android:icon="@drawable/ic_add" />
+        android:icon="@drawable/ic_person_add" />
     <item
         android:id="@+id/nav_lihat_data"
-        android:title="Lihat Data Pasien"
-        android:icon="@drawable/ic_view_list" />
+        android:title="Data Pasien"
+        android:icon="@drawable/ic_folder_open" />
     <item
         android:id="@+id/nav_pengaturan"
         android:title="Pengaturan"
@@ -18,5 +18,5 @@
     <item
         android:id="@+id/nav_keluar"
         android:title="Keluar"
-        android:icon="@drawable/ic_exit" />
+        android:icon="@drawable/ic_logout" />
 </menu>
